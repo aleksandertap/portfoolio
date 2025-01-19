@@ -1,1 +1,128 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+h1 {
+  font-family: "vt323", sans-serif;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: "vt323", sans-serif;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: "vt323", sans-serif;
+  font-size: 24px;
+}
+
+p {
+  font-family: "Roboto", serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: #17255a;
+}
+body header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+body header a {
+  text-decoration: none;
+  color: inherit;
+}
+body header a button {
+  width: 250px;
+}
+body header button {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  background-color: #1324bd;
+}
+body header .front {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+body header .left-menu {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  position: relative;
+  top: 13px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+body header .left-menu button {
+  border: 3px black solid;
+  padding: 5px;
+  color: white;
+}
+body header .left-menu button:hover {
+  background-color: #f5e2c8;
+  color: black;
+  border: 5px black solid;
+  transform: translateY(-3px);
+}
+body .right-menu {
+  display: flex;
+}
+body .right-menu button {
+  font-size: 50px;
+  background-color: #f5e2c8;
+  position: relative;
+  top: 4px;
+  border: 5px black solid;
+  border-bottom: none;
+  width: 250px;
+}
+body .front-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+body .front-page h1 {
+  background-size: cover;
+  background-color: #f5e2c8;
+  padding: 5px;
+}
+body .front-page .image-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+body .front-page .arrow-container {
+  padding-bottom: 30px;
+  position: relative;
+}
+body .front-page .arrow-container p {
+  color: white;
+  margin-bottom: 20px;
+}
+body .front-page .arrow-container::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid #fff;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .container {
+  margin: 30px;
+}
+body .container .card {
+  background-color: #f5e2c8;
+  border: 5px black solid;
+}
+body footer {
+  text-align: center;
+  border-top: 2px dotted black;
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */
