@@ -1,17 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: #17255a;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: "VT323", sans-serif;
+}
+
 h1 {
-  font-family: "vt323", sans-serif;
   font-size: 40px;
 }
 
 h2 {
-  font-family: "vt323", sans-serif;
   font-size: 32px;
 }
 
 h3 {
-  font-family: "vt323", sans-serif;
   font-size: 24px;
 }
 
@@ -20,89 +26,81 @@ p {
   font-size: 18px;
 }
 
-body {
-  background-color: #17255a;
+button {
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
-body header {
+
+header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding-top: 10px;
 }
-body header a {
+header a {
   text-decoration: none;
   color: inherit;
 }
-body header a button {
+header a button {
   width: 250px;
 }
-body header button {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+header button {
+  border-radius: 7px 7px 0 0;
   background-color: #1324bd;
 }
-body header .front {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+header button.front {
+  border-radius: 0;
 }
-body header .left-menu {
+header .left-menu {
   display: flex;
   flex-direction: column;
-  width: 250px;
-  position: relative;
-  top: 13px;
-  padding: 5px;
-  margin-bottom: 5px;
 }
-body header .left-menu button {
-  border: 3px black solid;
-  padding: 5px;
+header .left-menu button {
+  border: 3px solid #000;
+  padding: 10px;
   color: white;
 }
-body header .left-menu button:hover {
+header .left-menu button:hover {
   background-color: #f5e2c8;
-  color: black;
-  border: 5px black solid;
+  color: #000;
+  border-width: 5px;
   transform: translateY(-3px);
 }
-body .right-menu {
+header .right-menu {
   display: flex;
+  gap: 10px;
 }
-body .right-menu button {
+header .right-menu button {
   font-size: 50px;
   background-color: #f5e2c8;
-  position: relative;
-  top: 4px;
-  border: 5px black solid;
+  border: 5px solid #000;
   border-bottom: none;
   width: 250px;
 }
-body .front-page {
+
+.front-page {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   text-align: center;
 }
-body .front-page h1 {
-  background-size: cover;
+.front-page h1 {
   background-color: #f5e2c8;
   padding: 5px;
 }
-body .front-page .image-container {
+.front-page .image-container {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   padding: 30px;
 }
-body .front-page .arrow-container {
+.front-page .arrow-container {
   padding-bottom: 30px;
   position: relative;
 }
-body .front-page .arrow-container p {
+.front-page .arrow-container p {
   color: white;
   margin-bottom: 20px;
 }
-body .front-page .arrow-container::before {
+.front-page .arrow-container::before {
   content: "";
   position: absolute;
   width: 0;
@@ -114,15 +112,124 @@ body .front-page .arrow-container::before {
   left: 50%;
   transform: translateX(-50%);
 }
-body .container {
-  margin: 30px;
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
-body .container .card {
+.container .card {
   background-color: #f5e2c8;
-  border: 5px black solid;
+  border: 5px solid #000;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
-body footer {
+.container .card .about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.container .card .about img {
+  height: 400px;
+}
+.container .card .about .info {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.container .card .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.container .card .contact a {
+  color: inherit;
+}
+.container .card .contact button {
+  border: 3px solid #000;
+  padding: 5px;
+  background-color: #1324bd;
+  color: white;
+}
+.container .card .contact button:hover {
+  background-color: #17255a;
+  color: #f5e2c8;
+}
+.container .card .skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  border-top: 2px dotted black;
+}
+.container .card .skills .projects-courses {
+  display: flex;
+  flex-direction: column;
+}
+.container .card .skills .projects-courses .projects-info .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container .card .skills .projects-courses .projects-info .projects .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.container .card .skills .projects-courses .projects-info .projects .project-card img {
+  max-width: 100%;
+}
+.container .card .skills .projects-courses .projects-info .projects .project-card a {
+  color: inherit;
+}
+.container .card .skills .projects-courses .projects-info .course-info {
+  padding: 30px;
+}
+.container .card .skills .projects-courses .projects-info .course-info a {
+  color: inherit;
+}
+
+footer {
+  text-align: center;
+  border-top: 2px dotted #000;
   padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .left-menu, .right-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+  .left-menu button {
+    margin-bottom: 10px;
+  }
+  .front {
+    margin: 0;
+  }
+  .right-menu button {
+    font-size: 30px;
+    width: auto;
+  }
+  .container {
+    margin: 0;
+    padding: 10px;
+  }
+  .container .card {
+    padding: 0;
+  }
+  .container .card .about {
+    padding: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
